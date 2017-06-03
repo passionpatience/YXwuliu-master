@@ -169,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4.0dip"
                     android:layout_marginRight="10.0dip"
-                    android:background="@mipmap/editview_bg"
+                    android:background="#eaf0ed"
                     android:digits="0123456789."
                     android:ellipsize="end"
                     android:gravity="center_vertical"
@@ -185,8 +185,8 @@
                 android:id="@+id/btn_order_ok"
                 style="@style/button_text_style"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
-                android:layout_margin="10.0dip"
+                android:layout_height="40dip"
+                android:layout_margin="10dip"
                 android:background="@drawable/login_btn_selector"
                 android:text="@string/ok"/>
 

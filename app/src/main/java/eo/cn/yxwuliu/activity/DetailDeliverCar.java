@@ -68,6 +68,9 @@ public class DetailDeliverCar extends BaseMvpActivity implements View.OnClickLis
 
     @Override
     protected void setListener() {
+        mEdittextPublishcarsStarting.setOnClickListener(this);
+        mEdittextPublishcarsEnding.setOnClickListener(this);
+        mEdittextPublishcarsCartype.setOnClickListener(this);
 
     }
 

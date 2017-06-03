@@ -140,13 +140,17 @@ public class HomeFragment extends BaseMvpFragment<IHomeFragmentView, HomeProduct
                 //最外层的recyclerview的刷新时间
                 Log.v("TAG", "onRefresh");
                 presenter.getRefreshProduct();
+                mXRecyclerView.refreshComplete();
             }
+
 
             @Override
             public void onLoadMore() {
                 //最外层recyclerview的上拉加载事件
                 Log.v("TAG", "onLoadMore" + "");
                 presenter.getMoreProductData();
+                mXRecyclerView.loadMoreComplete();
+
             }
         });
 

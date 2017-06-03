@@ -1,7 +1,6 @@
 package eo.cn.yxwuliu.activity;
 
 import android.app.AlertDialog;
-import android.text.TextUtils;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.Gravity;
@@ -198,29 +197,29 @@ public class DetailDeliverGoods extends BaseMvpActivity<IDetailDeliverGoodsView,
                 String ArriveWhere = edittextdelivergoodsending.getText().toString().trim();
                 String productType = edittextDelivergoodsType.getText().toString().trim();
                 String productWeight = edittextDelivergoodsKg.getText().toString().trim();
-                if (TextUtils.isEmpty(startWhere)) {
-                    Toast.makeText(DetailDeliverGoods.this, "请先选择出发地", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(ArriveWhere)) {
-                    Toast.makeText(DetailDeliverGoods.this, "请先选择到达地", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(productType)) {
-                    Toast.makeText(DetailDeliverGoods.this, "请先选择货物类型", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(productWeight)) {
-                    Toast.makeText(DetailDeliverGoods.this, "请输入货物重量", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+//                if (TextUtils.isEmpty(startWhere)) {
+//                    Toast.makeText(DetailDeliverGoods.this, "请先选择出发地", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(ArriveWhere)) {
+//                    Toast.makeText(DetailDeliverGoods.this, "请先选择到达地", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(productType)) {
+//                    Toast.makeText(DetailDeliverGoods.this, "请先选择货物类型", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(productWeight)) {
+//                    Toast.makeText(DetailDeliverGoods.this, "请输入货物重量", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
 
                 IHttpInterface retrofit = RetrofitClient.getRetrofit();
                 HashMap<String, String> paramsMap = new HashMap<>();
-                paramsMap.put("chufadi", startWhere);
-                paramsMap.put("daodadi", ArriveWhere);
-                paramsMap.put("huowuleixing", productType);
-                paramsMap.put("请输入货物重量", productWeight);
+                paramsMap.put("yuan_dizhi", startWhere);
+//                paramsMap.put("fahuo_dizhi", ArriveWhere);
+//                paramsMap.put("parent_id", productType);
+//                paramsMap.put("huo_kg", productWeight);
                 final Call<String> call = retrofit.getGoodsInfo(paramsMap);
                 /*new Thread() {
                     public void run() {

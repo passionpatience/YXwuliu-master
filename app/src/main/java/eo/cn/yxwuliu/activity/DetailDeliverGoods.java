@@ -239,7 +239,6 @@ public class DetailDeliverGoods extends BaseMvpActivity<IDetailDeliverGoodsView,
                     @Override
                     public void onResponse(Call<String> call, Response<String> response) {
                         if (response.code() == 200) {
-
                             Log.v("TAG", response.body().toString());
                             Toast.makeText(DetailDeliverGoods.this, "发布成功", Toast.LENGTH_SHORT).show();
                             finish();
